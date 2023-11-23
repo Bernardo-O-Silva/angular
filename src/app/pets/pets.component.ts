@@ -40,25 +40,41 @@ export class PetsComponent  {
       let textbusca = this.text.toLowerCase().split('');
       let nomePet = this.dadosPets[numPets].nome.toLowerCase();
       let encontrou = false;
+      let qtdEncontrados = 0;
 
       for(let i = 0; i < textbusca.length; i++){
-        if(textbusca[i] == nomePet[i]){
-          encontrou = true;
-        }else{
-          encontrou = false;
+        
+        if(textbusca[i] == nomePet[i]) {
+          
+          qtdEncontrados++;
+          
         }
+      
       }
 
-      if(encontrou){
+      if(qtdEncontrados == textbusca.length){
+
+        encontrou = true;
+
+      }
+      else {
+
+        encontrou = false;
+
+      }
+
+      if(encontrou) {
+        
         this.filtradosPets[posPet] = dadosPets[numPets];
         posPet++;
+      
       }
+    
     }
 
   }
 
 }
-
 
 
 /*
