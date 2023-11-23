@@ -50,9 +50,9 @@ export const dadosPets = [
     tipo: 3,
     status: 0
   }
+
+
 ];
-
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
